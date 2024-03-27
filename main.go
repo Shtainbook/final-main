@@ -3,9 +3,8 @@ package main
 import (
 	"database/sql"
 	"fmt"
-	"time"
-
 	_ "modernc.org/sqlite"
+	"time"
 )
 
 const (

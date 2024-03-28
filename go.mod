@@ -1,5 +1,4 @@
-module final-main
-
+module github.com/Shtainbook/final-main
 go 1.21.1
 
 require (

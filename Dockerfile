@@ -1,7 +1,6 @@
 FROM golang:latest
 WORKDIR /app
-COPY go.mod go.sum ./
+COPY . .
 RUN go mod download
-COPY *.go *.db ./
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /final-main
-CMD ["/final-main"]
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /main
+CMD ["/main"]

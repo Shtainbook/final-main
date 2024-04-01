@@ -15,7 +15,8 @@ const (
 )
 
 type Parcel struct {
-	Number    int
+	Number int
+
 	Client    int
 	Status    string
 	Address   string

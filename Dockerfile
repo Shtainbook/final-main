@@ -1,8 +1,6 @@
-FROM golang:latest
-WORKDIR /go
-COPY go.mod go.sum ./
+FROM golang:1.22
+WORKDIR /app
+COPY . .
 RUN go mod download
-COPY *.go ./
-COPY tracker.db ./
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o ./final
-CMD ["/go/final"]
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /main
+CMD ["/main"]

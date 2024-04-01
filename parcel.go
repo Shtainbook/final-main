@@ -74,7 +74,6 @@ func (s ParcelStore) SetStatus(number int, status string) error {
 	_, err := s.db.Exec("UPDATE parcel SET status = :status WHERE number = :number",
 		sql.Named("status", status),
 		sql.Named("number", number))
-
 	return err
 }
 
@@ -83,7 +82,6 @@ func (s ParcelStore) SetAddress(number int, address string) error {
 		sql.Named("address", address),
 		sql.Named("number", number),
 		sql.Named("status", ParcelStatusRegistered))
-
 	return err
 }
 

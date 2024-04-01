@@ -1,6 +1,5 @@
-module final-main
-
-go 1.21.1
+module github.com/Shtainbook/final-main
+go 1.21.3
 
 require (
 	github.com/stretchr/testify v1.9.0
